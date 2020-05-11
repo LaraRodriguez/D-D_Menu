@@ -43,7 +43,8 @@ try:
 
                     if resp.status_code == 200:
                         datos = json.loads(resp.content)
-                        print("Habilidades disponibles:", datos)
+                        for dato in datos['results']:
+                            print(dato['name'])
 
                     input("Pulse para continuar...")
 
@@ -53,7 +54,10 @@ try:
                     resp = requests.get(api_address)
                     if resp.status_code == 200:
                         datos = json.loads(resp.content)
-                        print(datos)
+
+                        for dato in datos['results']:
+                            print(dato['name'])
+
                     input("Pulsa para continuar...")
 
                 elif opcion == 3:
@@ -62,7 +66,10 @@ try:
                     resp = requests.get(api_address)
                     if resp.status_code == 200:
                         datos = json.loads(resp.content)
-                        print(datos)
+
+                        for dato in datos['results']:
+                            print(dato['name'])
+
                     input("Pulse para continuar...")
 
                 elif opcion == 4:
@@ -71,7 +78,10 @@ try:
                     resp = requests.get(api_address)
                     if resp.status_code == 200:
                         datos = json.loads(resp.content)
-                        print(datos)
+
+                        for dato in datos['results']:
+                            print(dato['name'])
+
                     input("Pulse para continuar...")
                 elif opcion == 5:
                     break
@@ -90,7 +100,9 @@ try:
             print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-")
             if resp.status_code == 200:
                 datos = json.loads(resp.content)
-                print(datos.get('index'))
+
+                for dato in datos['results']:
+                    print(dato['name'])
 
             input("pulse para continuar")
 
@@ -106,7 +118,10 @@ try:
             if resp.status_code == 200:
 
                 datos = json.loads(resp.content)
-                print(datos)
+
+                for dato in datos['results']:
+                    print(dato['name'])
+
             input("pulse para continuar")
 
 # el equipamiento
@@ -121,7 +136,9 @@ try:
             if resp.status_code == 200:
 
                 datos = json.loads(resp.content)
-                print(datos)
+
+                for dato in datos['results']:
+                    print(dato['name'])
 
             input("pulse para continuar")
 
@@ -137,7 +154,9 @@ try:
             if resp.status_code == 200:
 
                 datos = json.loads(resp.content)
-                print(datos)
+
+                for dato in datos['results']:
+                    print(dato['name'])
 
             input("pulse para continuar")
 
@@ -152,7 +171,9 @@ try:
             print("*-*-*-*-*-*-*-*-*-*-*-*-*-")
             if resp.status_code == 200:
                 datos = json.loads(resp.content)
-                print(datos)
+
+                for dato in datos['results']:
+                    print(dato['name'])
 
             input("pulse para continuar")
 
